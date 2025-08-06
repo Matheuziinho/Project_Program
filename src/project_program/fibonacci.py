@@ -19,9 +19,9 @@ soma_pares = 0
 while a <= limite:
     if a % 2 == 0:
         soma_pares += a
-   # print(a)
+    print(a)
     a, b = b, a + b
    # print()
 
-print('-' * 30)   
+print('-' * 30)
 print(f'A soma dos números pares da sequência de Fibonacci até {limite} é: {soma_pares}')
