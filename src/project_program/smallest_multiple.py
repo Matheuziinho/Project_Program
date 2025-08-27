@@ -6,19 +6,17 @@
 
 from functools import reduce
 
-
-def sequence_numbers(n: int) -> list[int]:
-    return list(range(1, n + 1))
+from project_program import prime_factors
 
 
-def max_prime_factors(n: int) -> list[int]:
+def max_prime_factors(n: int) -> int:
     factors: list[int] = []
-    if num >= 1:
-        for i in sequence_numbers(n):
-            if num % i == 0:
-                i += 1
+    if n >= 1:
+        for i in range(1, n + 1):
+            if not n % i:
+                if i prime_factors
                 factors.append(i)
-    return factors
+    return max(factors)
 
 
 def smallest_multiple(n: int) -> int:

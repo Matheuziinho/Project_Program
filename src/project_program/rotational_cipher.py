@@ -1,9 +1,10 @@
 # Rotational cipher
 
-chars = 'abcdefghijklmnopqrstuvwxyz'
+chars = "abcdefghijklmnopqrstuvwxyz"
 
-def rotate(text, key):
-    newchars = chars[key:] + chars[:key]  # Criamos uma nova string com os caracteres rotacionados
-    trans = str.maketrans(chars, newchars)
+
+def rotate_chars(text, key):
+    chars_lower = chars[key:] + chars[:key]
+    chars_upper = chars.upper()[key:] + chars.upper()[:key]
+    trans = str.maketrans(chars + chars.upper(), chars_lower + chars_upper)
     return text.translate(trans)
-

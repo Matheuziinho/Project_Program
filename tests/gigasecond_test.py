@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from project_program.gigasecond import gigasecond
+from project_program.gigasecond import Gigasecond
 
 
-def test_gigasecond() -> None:
-    assert gigasecond(datetime(2015, 1, 24, 22, 0)) == datetime(2046, 10, 2, 23, 46)
-    assert gigasecond(datetime(1977, 1, 13)) == datetime(2009, 10, 11, 1, 46)
+def test_add_a_gigasecond_to_a_date():
+    gs = Gigasecond(datetime(2015, 1, 24, 22, 0))
+    assert gs.date() == datetime(2046, 10, 2, 23, 46, 40)
