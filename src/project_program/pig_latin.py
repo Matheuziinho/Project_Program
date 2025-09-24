@@ -1,5 +1,3 @@
-from turtle import position
-
 CONSONANTS = "bcdfghjklmnpqrstvwxz"
 VOWELS = "aeiou"
 

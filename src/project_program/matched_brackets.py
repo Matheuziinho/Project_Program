@@ -7,8 +7,16 @@ from inspect import stack
 
 
 def is_paired(frase):
-    brackets_open = {"(": ")", "[": "]", "{": "}"}
-    brackets_close = {")": "(", "]": "[", "}": "{"}
+    brackets_open = {
+        "(": ")",
+        "[": "]",
+        "{": "}",
+    }
+    brackets_close = {
+        ")": "(",
+        "]": "[",
+        "}": "{",
+    }
     stack = []
 
     for char in frase:
