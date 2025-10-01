@@ -1,3 +1,4 @@
+from typing import Any
 import pandas as pd
 import numpy as np
 from scipy.optimize import curve_fit
@@ -19,7 +20,7 @@ df_tratados = df[~df["Sitio"].isin(controles)]
 controle_medio = df_controles[["Baseline"]+tempo_cols].mean()
 
 # === 4. Funções ===
-def corrige_linha(row):
+def corrige_linha(row: Any) -> np.ndarray:
     """Aplica correção da fórmula para uma linha (tratado)."""
     baseline = row["Baseline"]
     valores = row[tempo_cols].astype(float).values
@@ -27,10 +28,10 @@ def corrige_linha(row):
     corrigido = valores - baseline - controle_vals
     return corrigido
 
-def trapezio(y, t):
+def trapezio(y: np.ndarray, t: np.ndarray) -> float:
     return np.trapz(y, t)
 
-def hill_equation(dose, E_min, E_max, ED50, h):
+def hill_equation(dose: float, E_min: float, E_max: float, ED50: float, h: float) -> float:
     return E_min + (E_max - E_min) / (1 + (ED50/dose)**h)
 
 # === 5. Calcular AUEC corrigida por linha ===
