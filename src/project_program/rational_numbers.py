@@ -14,9 +14,10 @@ class RationalNumber(object):
 
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, RationalNumber):
-            return False
+            raise ValueError("Other must be a RationalNumber.")
         return self.numerator * other.denominator == other.numerator * self.denominator
 
+    # ----------------------------------------------------------------------------------------
     def __add__(self, other: "RationalNumber") -> "RationalNumber":
         return RationalNumber(
             self.numerator * other.denominator

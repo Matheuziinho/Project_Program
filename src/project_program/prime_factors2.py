@@ -7,11 +7,11 @@ class PrimeFactors:
         self.number = number
 
     def prime_factors(self) -> list[int]:
-        factors = []
+        factors: list[int] = []
         number = self.number
         divisor = 2
         while number > 1:
-            if number % divisor == 0:
+            if not number % divisor:
                 factors.append(divisor)
                 number //= divisor
             else:
