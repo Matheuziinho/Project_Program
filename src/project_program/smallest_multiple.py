@@ -6,7 +6,7 @@
 
 from functools import reduce
 
-from project_program import prime_factors
+# from project_program import prime_factors
 
 
 def max_prime_factors(n: int) -> int:
@@ -14,7 +14,7 @@ def max_prime_factors(n: int) -> int:
     if n >= 1:
         for i in range(1, n + 1):
             if not n % i:
-                if i prime_factors
+                #               if prime_factors(i):
                 factors.append(i)
     return max(factors)
 
