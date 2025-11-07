@@ -1,4 +1,6 @@
-from Crypto.Util import number
+import sys
+
+sys.set_int_max_str_digits(5000)
 
 from project_program.first_ten_digits import first_ten_digits
 
@@ -107,4 +109,4 @@ def test_first_ten_digits() -> None:
 53503534226472524250874054075591789781264330331690"
     )
 
-    assert first_ten_digits(num) == 3710728753
+    assert first_ten_digits(num) == 5537376230
