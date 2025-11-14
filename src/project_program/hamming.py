@@ -1,8 +1,8 @@
-# Hamming
+# The Hamming distance
 
 
 class HammingTest(object):
-    def __init__(self, dna_code: str):
+    def __init__(self, dna_code: str) -> None:
         self.dna_code = dna_code
 
     def __repr__(self) -> str:
