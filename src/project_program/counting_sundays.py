@@ -3,8 +3,9 @@
 from datetime import date
 
 
-def counting(count):
-   for year in range(1900, 2001):
+def counting(y1: int, y2: int):
+    count = 0
+    for year in range(y1, y2 + 1):
         for month in range(1, 13):
             d = date(year, month, 1)
             if d.weekday() == 6:
