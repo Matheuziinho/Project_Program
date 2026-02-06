@@ -1,5 +1,5 @@
-from counting_sundays import counting
+from project_program.counting_sundays import counting
 
 
 def test_counting():
-    assert counting(1900, 2000) == 171
+    assert counting(1901, 2000) == 5218
