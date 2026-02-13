@@ -1,5 +1,4 @@
 def get_divisors(n: int) -> list[int]:
-    """Get all divisors of a number."""
     divisors = []
     for i in range(1, int(n**0.5) + 1):
         if not n % i:
